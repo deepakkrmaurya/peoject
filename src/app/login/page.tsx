@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 const page = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [user, setuser] = useState({
       email: "",
       password: "",
