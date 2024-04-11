@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = ({params}:any) => {
+const Page = ({params}:any) => {
   return (
     <div className=' flex flex-col items-center justify-center min-h-screen bg-gray-600'>
       <h1>profile page</h1>
@@ -9,4 +9,4 @@ const page = ({params}:any) => {
   )
 }
 
-export default page
+export default Page

@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast'
 
 import Link from 'next/link'
 
-const Page = () => {
+const ProfilePage = () => {
    
     const [data,setdata]=useState('nothing')
     const getUserData = async()=>{
@@ -33,4 +33,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default ProfilePage
