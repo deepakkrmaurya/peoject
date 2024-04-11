@@ -1,12 +1,14 @@
 'use client'
+ 
+import { useRouter } from 'next/navigation'
 import axios from "axios";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
+
 import React, {  useEffect } from "react";
 import toast from "react-hot-toast";
 
 const LoginPage = () => {
-  // const router = useRouter();
+  const router = useRouter()
   const [user, setuser] = React.useState({
       email: "",
       password: "",
@@ -20,7 +22,7 @@ const LoginPage = () => {
           setloading(true)
           const res = await axios.post('/api/users/login', user)
           console.log('signup success', res.data)
-          // router.push("/profile")
+          router.push("/profile")
           toast.success("Login Successfully")
       } catch (error: any) {
           console.log('signup failed' + error)
