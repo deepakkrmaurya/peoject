@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const ProfilePage = () => {
    
-    const [data,setdata]=useState('nothing')
+    const [data,setdata]=React.useState('nothing')
     const getUserData = async()=>{
      const res =  await axios.get('/api/users/me')
      console.log(res.data.user)

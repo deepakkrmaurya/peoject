@@ -3,19 +3,19 @@
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
-const Page = () => {
+const LoginPage = () => {
   const router = useRouter();
-  const [user, setuser] = useState({
+  const [user, setuser] = React.useState({
       email: "",
       password: "",
      
   })
 
-  const [buttonDisabled, setDisabled] = useState(false)
-  const [loading, setloading] = useState(false)
+  const [buttonDisabled, setDisabled] = React.useState(false)
+  const [loading, setloading] = React.useState(false)
   const onLogin = async () => {
       try {
           setloading(true)
@@ -59,5 +59,5 @@ const Page = () => {
   )
 }
 
-export default Page
+export default LoginPage 
 
