@@ -1,12 +1,12 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
-import { useRouter } from 'next/navigation'
+
 import Link from 'next/link'
 
-const page = () => {
-    const router = useRouter()
+const Page = () => {
+   
     const [data,setdata]=useState('nothing')
     const getUserData = async()=>{
      const res =  await axios.get('/api/users/me')
@@ -33,4 +33,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
